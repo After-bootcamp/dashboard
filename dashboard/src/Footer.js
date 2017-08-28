@@ -4,7 +4,7 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer_section">
-        Footer
+        Created By:
       </div>
     )
   }
