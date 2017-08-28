@@ -18,6 +18,12 @@ body {
     border-radius: 10px;
     text-align: center;
     padding: 15px 0; }
+  .main_section .check_in_section {
+    border: 2px solid #00bd92;
+    border-radius: 10px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center; }
 
 .footer_section {
   background: #48d9ff;
