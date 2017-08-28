@@ -6,3 +6,15 @@ body {
 * {
   border: 1px red solid;
 }
+.header_section {
+  background-color: blue;
+  height: 10vh;
+}
+.main_section {
+  background-color: green;
+  height: 83vh;
+}
+.footer_section {
+  background-color: orange;
+  height: 5vh;
+}
