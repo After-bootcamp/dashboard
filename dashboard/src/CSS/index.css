@@ -3,7 +3,8 @@ body {
 
 .header_section {
   background: #48d9ff;
-  height: 10vh; }
+  height: 10vh;
+  display: flex; }
   .header_section h1 {
     margin: 0; }
 

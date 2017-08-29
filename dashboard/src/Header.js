@@ -4,7 +4,8 @@ class Header extends Component {
   render() {
     return (
       <div className="header_section">
-        <h1>Header</h1>
+        <div id="main_logo">After Bootcamp</div>
+        <div >menu</div>
       </div>
     )
   }
