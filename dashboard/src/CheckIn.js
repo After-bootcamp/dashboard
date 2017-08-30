@@ -22,7 +22,7 @@ class CheckIn extends Component {
   render() {
     return (
       <div className="check_in_section">
-        <h1>CheckIn form to be added here.</h1>
+        <h1>CheckIn modal to be added here.</h1>
         <form onSubmit={this.handleSubmit}>
           <label>
             Name:
