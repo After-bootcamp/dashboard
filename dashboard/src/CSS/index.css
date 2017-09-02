@@ -1,12 +1,8 @@
 body {
   margin: 0; }
 
-.header_section {
-  background: #48d9ff;
-  height: 10vh;
-  display: flex; }
-  .header_section h1 {
-    margin: 0; }
+.navbar-light {
+  background-color: #48d9ff; }
 
 .main_section {
   background: #fff5f5;
