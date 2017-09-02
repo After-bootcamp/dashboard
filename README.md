@@ -1,4 +1,4 @@
-#After Bootcamp
+# After Bootcamp
 
 ## dashboard
 
@@ -7,22 +7,22 @@ Students who exit coding bootcamps often feel like they are tossed out into the 
 We are taking former bootcampers, having them build the app using languages they may not know, and working together to both build up their portfolio's and have them learn.
 
 
-##Technologies Used
-React.JS
-SASS
-Bootstrap
+## Technologies Used
+- React.JS
+- SASS
+- Bootstrap
 
-##Current Contributors:
+## Current Contributors:
 
-###Todd Gerdy
+### Todd Gerdy
 - LinkedIn: http://www.linkedin.com/in/toddgerdy
 - Github:   http://www.github.com/toadilicious
 
-###Dan Lawrence
+### Dan Lawrence
 - LinkedIn: http://www.linkedin.com/in/dlawr
 - Github:   http://www.linkedin.com/in/dlawr
 
-###Josh Winterbotham
+### Josh Winterbotham
 - LinkedIn: https://www.linkedin.com/in/josh-winterbotham-435a3761/
 - Github:   https://github.com/JoshSummerTop
 
