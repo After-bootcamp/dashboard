@@ -5,7 +5,7 @@ class Header extends Component {
     return (
       <div className="container">
         <div className="navbar fixed-top navbar-light" >
-          <a className="navbar-brand" href="#">After Bootcamp</a>
+          <a className="navbar-brand" href="localhost:3000">After Bootcamp</a>
           <div className="pos-f-t">
             <div className="collapse" id="navbarToggleExternalContent">
               <div className="p-4">
