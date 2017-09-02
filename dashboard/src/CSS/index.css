@@ -1,6 +1,13 @@
 body {
   margin: 0; }
 
+.header_section {
+  background: #48d9ff;
+  height: 10vh;
+  display: flex; }
+  .header_section h1 {
+    margin: 0; }
+
 .navbar-light {
   background-color: #48d9ff; }
 
@@ -12,7 +19,7 @@ body {
   .main_section #check_in_button {
     background: #00754b;
     width: 25%;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     padding: 15px 0; }
   .main_section .check_in_section {
