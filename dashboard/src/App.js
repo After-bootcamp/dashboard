@@ -4,12 +4,12 @@ import './CSS/App.css';
 
 // child Components
 import NavBar from './NavBar'
-import NavList from './NavList'
 import Footer from './Footer'
 import Main from './Main'
 
 
 class App extends Component {
+
   render() {
     return (
       <div>
