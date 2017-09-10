@@ -9,16 +9,23 @@ class NavBar extends Component {
       <div>
         <nav className="navbar navbar-default">
           <div className="navbar-header">
+            <a className="navbar-brand" href="/localhost:3000">After Bootcamp</a>
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse">
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="/localhost:3000">After Bootcamp</a>
           </div>
           <div className="navbar-collapse" id="nav-collapse">
-            <div className="nav navbar-nav">{<NavItem data={NavData}/>}</div>
+            <div className="nav navbar-nav navbar-right">
+              <div className="dropdown">
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown">Menu <span className="caret"></span></a>
+                <div className="dropdown-menu">
+                  <ul className="nav navbar-nav">{ <NavItem data={NavData} /> }</ul>
+                </div>
+              </div>
+            </div>
           </div>
         </nav>
       </div>
