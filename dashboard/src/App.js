@@ -3,16 +3,17 @@ import React, { Component } from 'react';
 import './CSS/App.css';
 
 // child Components
-import Header from './Header'
+import NavBar from './NavBar'
 import Footer from './Footer'
 import Main from './Main'
 
 
 class App extends Component {
+
   render() {
     return (
       <div>
-        <Header />
+        <NavBar />
         <Main />
         <Footer />
       </div>
