@@ -18,6 +18,46 @@
   font-size: large;
 }
 
+.navbar-default {
+  background-color: #1a3648;
+  border-radius: 0;
+  position: relative;
+}
+
+.navbar-default .navbar-brand {
+  color: #ccc;
+}
+
+.navbar-form {
+  margin-right: 40px;
+  border-radius: 0;
+}
+
+.dropdown a {
+  background-color: #ccc;
+  color: #1a3648;
+  text-decoration: none;
+}
+
+.navbar-default .navbar-nav li a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #ccc;
+  background-color: transparent;
+}
+
+.dropdown-menu a:link {
+  background-color: #FFF;
+  color: #1a3648; 
+  text-decoration: none;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
