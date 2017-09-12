@@ -26,7 +26,9 @@ We are taking former bootcampers, having them build the app using languages they
 - LinkedIn: https://www.linkedin.com/in/josh-winterbotham-435a3761/
 - Github:   https://github.com/JoshSummerTop
 
-
+### Amanda Crawford
+- LinkedIn: https://www.linkedin.com/in/amandacrawfordcodes/
+- Github: https://github.com/agerista/
 
 
 
