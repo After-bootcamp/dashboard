@@ -30,7 +30,9 @@ We are taking former bootcampers, having them build the app using languages they
 - LinkedIn: https://www.linkedin.com/in/amandacrawfordcodes/
 - Github: https://github.com/agerista/
 
-
+### Danya D. Smith
+- LinkedIn: https://www.linkedin.com/in/danyadsmith/
+- Github: https://github.com/danyadsmith
 
 
 
