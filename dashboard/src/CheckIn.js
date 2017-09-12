@@ -40,6 +40,7 @@ class CheckIn extends Component {
   handleSubmit(event) {
     event.preventDefault()
     console.log(this.state)
+    this.close()
   }
 
   handleChange(event) {

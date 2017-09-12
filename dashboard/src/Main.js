@@ -8,7 +8,7 @@ class Main extends Component {
     return (
       <div className="main_section">
         <h2>DASHBOARD</h2>
-        <CheckIn/>
+        <CheckIn sendData={this.props.getData}/>
       </div>
     )
   }
