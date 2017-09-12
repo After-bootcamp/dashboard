@@ -5,7 +5,7 @@ import SignUp from './SignUp';
 
 class NavBar extends Component {
   render() {
-    
+
     return (
       <div>
         <nav className="navbar navbar-default">
@@ -28,7 +28,7 @@ class NavBar extends Component {
                       </div>
                     </div>
                 </li>
-                <li>
+                <div>
                   <div className="nav navbar-nav navbar-right">
                       <li className="dropdown">
                         <a href="#" className="dropdown-toggle" data-toggle="dropdown">Menu<div className="caret"></div></a>
@@ -37,7 +37,7 @@ class NavBar extends Component {
                         </div>
                       </li>
                   </div>
-                </li>
+                </div>
               </ul>
             </div>
           </div>
