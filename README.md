@@ -22,16 +22,23 @@ We are taking former bootcampers, having them build the app using languages they
 - LinkedIn: http://www.linkedin.com/in/dlawr
 - Github:   http://www.linkedin.com/in/dlawr
 
-### Josh Winterbotham
-- LinkedIn: https://www.linkedin.com/in/josh-winterbotham-435a3761/
-- Github:   https://github.com/JoshSummerTop
-
-### Amanda Crawford
+### Amanda Crawford (start to present)
 - LinkedIn: https://www.linkedin.com/in/amandacrawfordcodes/
 - Github: https://github.com/agerista/
 
+### Danya D. Smith
+- LinkedIn: https://www.linkedin.com/in/danyadsmith/
+- Github: https://github.com/danyadsmith
 
+### Thibaut Massard (September 2017)
+- LinkedIn: https://www.linkedin.com/in/thibaut-massard/
+- Github: https://github.com/thib146
 
+## Previous Contributors
+
+### Josh Winterbotham (start through September 2017)
+- LinkedIn: https://www.linkedin.com/in/josh-winterbotham-435a3761/
+- Github:   https://github.com/JoshSummerTop
 
 
 

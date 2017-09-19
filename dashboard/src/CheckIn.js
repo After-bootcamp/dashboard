@@ -3,6 +3,7 @@ import { Modal, FormGroup, Radio, FormControl, ControlLabel } from 'react-bootst
 
 class CheckIn extends Component {
   constructor (props) {
+    console.log(props, "%%%%%%%%%%%%");
     super(props);
     this.state = {
       showModal: false,
@@ -41,6 +42,7 @@ class CheckIn extends Component {
     event.preventDefault()
     console.log(this.state)
     this.close()
+    this.props.showAnswers(this.state)
   }
 
   handleChange(event) {
@@ -88,7 +90,13 @@ class CheckIn extends Component {
     })
   }
 
-  render() {
+  render(props) {
+    // console.log(this.props.todaysData, '$$$$$$');
+    const dataList2 = this.props.todaysData.map(item => {
+      return (
+        <p> {item.test} </p>
+      )
+    })
     return (
       <div>
         <h3
@@ -242,9 +250,10 @@ class CheckIn extends Component {
                   {[...Array(25).keys()].map((n)=>(<option key={n} value={`${n}`}>{n}</option>))}
                 </FormControl>
               </FormGroup>
-              <button>Submit</button>
+              <button >Submit</button>
             </form>
           </Modal.Body>
+          <h1>{ dataList2 }</h1>
         </Modal>
       </div>
     )
