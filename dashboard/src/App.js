@@ -9,12 +9,19 @@ import Main from './Main'
 
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      todaysData: [{test: "test"}]
+    }
+  }
+
 
   render() {
     return (
       <div>
         <NavBar />
-        <Main />
+        <Main todaysData={ this.state.todaysData }/>
         <Footer />
       </div>
     );
