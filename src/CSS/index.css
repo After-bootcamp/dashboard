@@ -1,0 +1,36 @@
+body {
+  margin: 0; }
+
+.header_section {
+  background: #48d9ff;
+  height: 10vh;
+  display: flex; }
+  .header_section h1 {
+    margin: 0; }
+
+.navbar-light {
+  background-color: #48d9ff; }
+
+.main_section {
+  background: #fff5f5;
+  height: 80vh; }
+  .main_section h2 {
+    margin: 0; }
+  .main_section #check_in_button {
+    background: #00754b;
+    width: 25%;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 0; }
+  .main_section .check_in_section {
+    border: 2px solid #00bd92;
+    border-radius: 10px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center; }
+
+.footer_section {
+  background: #48d9ff;
+  height: 10vh; }
+
+/*# sourceMappingURL=index.css.map */
