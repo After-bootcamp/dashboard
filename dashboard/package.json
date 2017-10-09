@@ -7,6 +7,7 @@
     "react-addons-css-transition-group": "^15.6.0",
     "react-addons-transition-group": "^15.6.0",
     "react-bootstrap": "^0.31.2",
+    "react-d3-basic": "^1.6.11",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.11",
     "reactstrap": "^4.8.0"
