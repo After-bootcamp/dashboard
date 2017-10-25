@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const Charts = (props) => {
-  console.log('here are my props on Chart page', props);
+const Charts = (props) => 
   return (
     <div>
       <h2>Charts(some kind of progress thingy)</h2>
@@ -13,8 +12,8 @@ const Charts = (props) => {
       <h3>Community Forum: {props.currentData.selectedOption6}</h3>
       <h3>Available Time: {props.currentData.selectedHours}</h3>
     </div>
-  )
-}
+  );
+};
 
 
 export default Charts;
