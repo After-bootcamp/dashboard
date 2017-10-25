@@ -3,9 +3,9 @@ import React, { Component } from "react";
 import "./CSS/App.css";
 
 // child Components
-import NavBar from './NavBar'
-import Footer from './Footer'
-import Main from './Main'
+import NavBar from "./NavBar";
+import Footer from "./Footer";
+import Main from "./Main";
 
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
     super();
     this.state = {
       todaysData: [{test: "test"}]
-    }
+    };
   }
 
 
