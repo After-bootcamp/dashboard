@@ -39,7 +39,7 @@ class CheckIn extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
+//     console.log(this.state);
     this.close();
     this.props.showAnswers(this.state);
   }
