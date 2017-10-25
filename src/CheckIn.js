@@ -1,25 +1,24 @@
-import React, { Component } from 'react'
-import { Modal, FormGroup, Radio, FormControl, ControlLabel } from 'react-bootstrap';
+import React, { Component } from "react";
+import { Modal, FormGroup, Radio, FormControl, ControlLabel } from "react-bootstrap";
 
 class CheckIn extends Component {
   constructor (props) {
-    console.log(props, "%%%%%%%%%%%%");
     super(props);
     this.state = {
       showModal: false,
-      selectedOption1: '0',
-      selectedOption2: '0',
-      selectedOption3: '0',
-      selectedOption4: '0',
-      selectedOption5: '0',
-      selectedOption6: '0',
+      selectedOption1: "0",
+      selectedOption2: "0",
+      selectedOption3: "0",
+      selectedOption4: "0",
+      selectedOption5: "0",
+      selectedOption6: "0",
       selectedHours: '0'
-    }
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.open = this.open.bind(this)
-    this.close = this.close.bind(this)
+    this.open = this.open.bind(this);
+    this.close = this.close.bind(this);
 
     this.handleOptionChange1 = this.handleOptionChange1.bind(this);
     this.handleOptionChange2 = this.handleOptionChange2.bind(this);
@@ -31,18 +30,18 @@ class CheckIn extends Component {
   }
 
   close() {
-    this.setState({ showModal: false })
+    this.setState({ showModal: false });
   }
 
   open() {
-    this.setState({ showModal: true })
+    this.setState({ showModal: true });
   }
 
   handleSubmit(event) {
-    event.preventDefault()
-    console.log(this.state)
-    this.close()
-    this.props.showAnswers(this.state)
+    event.preventDefault();
+    console.log(this.state);
+    this.close();
+    this.props.showAnswers(this.state);
   }
 
   handleChange(event) {
@@ -51,7 +50,7 @@ class CheckIn extends Component {
   handleOptionChange1(event, name) {
     this.setState({
       selectedOption1: event.target.value
-    })
+    });
   }
 
   handleOptionChange2(event) {
@@ -92,10 +91,10 @@ class CheckIn extends Component {
 
   render(props) {
     // console.log(this.props.todaysData, '$$$$$$');
-    const dataList2 = this.props.todaysData.map(item => {
+    const dataList2 = this.props.todaysData.map((item) => {
       return (
         <p> {item.test} </p>
-      )
+      );
     })
     return (
       <div>
@@ -117,19 +116,19 @@ class CheckIn extends Component {
                 <Radio name="radioGroup1" value="1" checked={this.state.selectedOption1 === "1"} onChange={this.handleOptionChange1} inline>
                   1
                 </Radio>
-                {' '}
+                {" "}
                 <Radio name="radioGroup1" value="2" checked={this.state.selectedOption1 === "2"} onChange={this.handleOptionChange1} inline>
                   2
                 </Radio>
-                {' '}
+                {" "}
                 <Radio name="radioGroup1" value="3" checked={this.state.selectedOption1 === "3"} onChange={this.handleOptionChange1} inline>
                   3
                 </Radio>
-                {' '}
+                {" "}
                 <Radio name="radioGroup1" value="4" checked={this.state.selectedOption1 === "4"} onChange={this.handleOptionChange1} inline>
                   4
                 </Radio>
-                {' '}
+                {" "}
                 <Radio name="radioGroup1" value="5" checked={this.state.selectedOption1 === "5"} onChange={this.handleOptionChange1} inline>
                   5
                 </Radio>
@@ -247,7 +246,7 @@ class CheckIn extends Component {
               <FormGroup controlId="formControlsSelect">
                 <ControlLabel># Hours Available Today</ControlLabel>
                 <FormControl onChange={this.handleSelectChange} componentClass="select" placeholder="select">
-                  {[...Array(25).keys()].map((n)=>(<option key={n} value={`${n}`}>{n}</option>))}
+                  {[...Array(25).keys()].map((n) => (<option key={n} value={`${n}`}>{n}</option>))}
                 </FormControl>
               </FormGroup>
               <button >Submit</button>
