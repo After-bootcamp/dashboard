@@ -1,6 +1,6 @@
 const NavData = [
 
-// TODO update hrefs 
+// TODO: Make it a single page route. 
     {
         title: "About Us",
         href: "/about-us"

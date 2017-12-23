@@ -11,7 +11,7 @@ class NavBar extends Component {
         <nav className="navbar navbar-default">
           <div className="container-fluid">
             <div className="navbar-header">
-              <a className="navbar-brand" href="/localhost:3000">After Bootcamp</a>
+              <a className="navbar-brand" href="/">After Bootcamp</a>
               <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse">
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
@@ -31,7 +31,7 @@ class NavBar extends Component {
                 <div>
                   <div className="nav navbar-nav navbar-right">
                       <li className="dropdown">
-                        <a href="#" className="dropdown-toggle" data-toggle="dropdown">Menu<div className="caret"></div></a>
+                        <a href="" className="dropdown-toggle" data-toggle="dropdown">Menu<div className="caret"></div></a>
                         <div className="dropdown-menu">
                           <ul className="nav navbar-nav">{ <NavItem data={NavData} /> }</ul>
                         </div>

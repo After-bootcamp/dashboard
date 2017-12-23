@@ -5,6 +5,7 @@ class CheckIn extends Component {
   constructor (props) {
     super(props);
     this.state = {
+      todaysData: props.todaysData,
       showModal: false,
       selectedOption1: "0",
       selectedOption2: "0",
@@ -91,11 +92,11 @@ class CheckIn extends Component {
 
   render(props) {
     // console.log(this.props.todaysData, '$$$$$$');
-    const dataList2 = this.props.todaysData.map((item) => {
-      return (
-        <p> {item.test} </p>
-      );
-    })
+    // const dataList2 = this.props.todaysData.map((item) => {
+    //   return (
+    //     <p> {item.test} </p>
+    //   );
+    // })
     return (
       <div>
         <h3
@@ -252,7 +253,6 @@ class CheckIn extends Component {
               <button >Submit</button>
             </form>
           </Modal.Body>
-          <h1>{ dataList2 }</h1>
         </Modal>
       </div>
     )
