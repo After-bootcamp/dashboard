@@ -31,10 +31,6 @@ We are taking former bootcampers, having them build the app using languages they
 - LinkedIn: https://www.linkedin.com/in/danyadsmith/
 - Github: https://github.com/danyadsmith
 
-### Thibaut Massard (September 2017)
-- LinkedIn: https://www.linkedin.com/in/thibaut-massard/
-- Github: https://github.com/thib146
-
 ## Previous Contributors
 
 ### Josh Winterbotham (start through September 2017)
@@ -1824,7 +1820,7 @@ If you’re using [Apache HTTP Server](https://httpd.apache.org/), you need to c
     RewriteRule ^ index.html [QSA,L]
 ```
 
-It will get copied to the `build` folder when you run `npm run build`. 
+It will get copied to the `build` folder when you run `npm run build`.
 
 If you’re using [Apache Tomcat](http://tomcat.apache.org/), you need to follow [this Stack Overflow answer](https://stackoverflow.com/a/41249464/4878474).
 
