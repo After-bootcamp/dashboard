@@ -17,8 +17,8 @@ const AboutData = [
     LinkedIn: "https://www.linkedin.com/in/danyadsmith/",
     Github: "https://github.com/danyadsmith"
   },{
-    name: "Josh Winterbotham"
-    LinkedIn: "https://www.linkedin.com/in/josh-winterbotham-435a3761/"
+    name: "Josh Winterbotham",
+    LinkedIn: "https://www.linkedin.com/in/josh-winterbotham-435a3761/",
     Github:   "https://github.com/JoshSummerTop"
   }
 ];

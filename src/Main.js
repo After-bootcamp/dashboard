@@ -10,11 +10,6 @@ class Main extends Component {
 
 
   render() {
-    // const dataList = this.props.todaysData.map(item => {
-    //   return (
-    //     <p> {item.test} </p>
-    //   )
-    // })
     return (
       <div className="main_section">
         <Switch>
