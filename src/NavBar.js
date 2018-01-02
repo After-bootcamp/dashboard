@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavData from './NavData';
 import NavItem from './NavItem';
-import SignUp from './SignUp';
+import SignIn from './SignIn';
 
 class NavBar extends Component {
   render() {
@@ -24,7 +24,7 @@ class NavBar extends Component {
                 <li>
                     <div className="nav navbar-form">
                       <div className="form-group">
-                        <SignUp />
+                        <SignIn />
                       </div>
                     </div>
                 </li>
