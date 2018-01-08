@@ -8,7 +8,7 @@ const CLIENT_ID = 'lIynR8IxP16BXs9ve75SLrbhTM9i3gBa';
 const CLIENT_DOMAIN = 'nerdygerdy.auth0.com/';
 const REDIRECT = 'http://localhost:3000/callback';
 const SCOPE = 'read:checkin';
-const AUDIENCE = 'http://www.afterbootcamp.com';
+const AUDIENCE = 'www.afterbootcamp.com';
 
 var auth = new auth0.WebAuth({
   clientID: CLIENT_ID,
@@ -27,7 +27,7 @@ export function login() {
 export function logout() {
   clearIdToken();
   clearAccessToken();
-  browserHistory.push('/');
+  browserHistory.push('/about_us');
 }
 
 export function requireAuth(nextState, replace) {
@@ -76,14 +76,26 @@ export function isLoggedIn() {
 }
 
 function getTokenExpirationDate(encodedToken) {
-  const token = decode(encodedToken);
-  if (!token.exp) { return null; }
+  try {
+    const token = decode(encodedToken);
+    if (!token.exp) { return null; }
 
-  const date = new Date(0);
-  date.setUTCSeconds(token.exp);
+    const date = new Date(0);
+    date.setUTCSeconds(token.exp);
 
-  return date;
+    return date;
+  } catch(err) {console.log(err)}
 }
+
+// function getTokenExpirationDate(encodedToken) {
+//   const token = decode(encodedToken);
+//   if (!token.exp) { return null; }
+//
+//   const date = new Date(0);
+//   date.setUTCSeconds(token.exp);
+//
+//   return date;
+// }
 
 function isTokenExpired(token) {
   const expirationDate = getTokenExpirationDate(token);

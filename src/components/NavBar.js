@@ -6,6 +6,7 @@ import '../CSS/App.css'
 // Child Components
 import NavData from './NavData';
 import NavItem from './NavItem';
+import AboutMe from './AboutMe';
 
 class NavBar extends Component {
 
@@ -15,20 +16,21 @@ class NavBar extends Component {
           <div className="navbar-header">
             <Link className="navbar-brand" to="/" >AfterBootcamp</Link>
           </div>
-          <ul>
+          <ul className="nav navbar-nav">
             <li>
               <Link to='/'>Intro</Link>
+              <Link to='/about_us'>About Us</Link>
             </li>
             <li>
             {
-              ( isLoggedIn() ) ? <Link to="/main_page">Home</Link> : ''
+              ( isLoggedIn() ) ? <Link to="/dashboard">dashboard</Link> : ''
             }
             </li>
           </ul>
           <ul className="nav navbar-nav navbar-right">
             <li>
               {
-                (isLoggedIn() ? ( <button className="btn btn-danger log" onClick={() => logout()}>Log out </button>) : (<button className="btn btn-info log" onClick={() => login()}>Log In</button>))
+                (isLoggedIn() ? ( <Link className="btn btn-danger log" to="/" onClick={() => logout()}>Log out </Link>) : (<button className="btn btn-info log" onClick={() => login()}>Log In</button>))
               }
             </li>
           </ul>

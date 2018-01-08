@@ -9,10 +9,7 @@ class Main extends Component {
   render() {
     return (
       <div className="main_section">
-        <Switch>
-          <Route exact path="/" component={Stats} />
-          <Route path="/about-us" component={AboutMe} />
-        </Switch>
+        <Stats />
       </div>
     )
   }
