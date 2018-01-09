@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # After Bootcamp
 
 ## dashboard
@@ -37,32 +36,6 @@ We are taking former bootcampers, having them build the app using languages they
 - LinkedIn: https://www.linkedin.com/in/josh-winterbotham-435a3761/
 - Github:   https://github.com/JoshSummerTop
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#END
-=======
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -2217,4 +2190,3 @@ To resolve this:
 ## Something Missing?
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
->>>>>>> a9f89bf8db5efc214b376a882b07d029f56a5fd0
