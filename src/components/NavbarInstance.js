@@ -1,42 +1,41 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { login, logout, isLoggedIn } from '../utils/AuthService';
-import {NavItem, Navbar} from 'react-bootstrap';
-import '../CSS/App.css'
-
-// Child Components
-// import NavData from './NavData';
-// import NavItem from './NavItem';
-// import AboutMe from './AboutMe';
+import React, {Component} from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import {login, logout, isLoggedIn} from '../utils/AuthService';
+import {NavItem, Navbar, Nav, Button} from 'react-bootstrap';
+import '../CSS/App.css';
 
 class NavbarInstance extends Component {
 
   render() {
     return (
-
-        <nav className="navbar navbar-default">
-          <div className="navbar-header">
-            <Link className="navbar-brand" to="/" >AfterBootcamp</Link>
-          </div>
-          <NavItem eventKey={1} href="/">
+      <Navbar  collapseOnSelect>
+        <Navbar.Header >
+          <Navbar.Brand>
+            <a href="/" >AfterBootcamp</a>
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav >
+            <NavItem eventKey={1} href="/">
             Intro
-          </NavItem>
-          <NavItem eventKey={2} href="/about_us">
+            </NavItem>
+            <NavItem eventKey={2} href="/about_us">
             About Us
-          </NavItem>
-          {
-            ( isLoggedIn() ) ? <NavItem eventKey={3} href="/dashboard">dashboard</NavItem> : ''
-          }
-          <ul className="nav navbar-nav navbar-right">
-            <li>
-              {
-                (isLoggedIn() ? ( <Link className="btn btn-danger log" to="/" onClick={() => logout()}>Log out </Link>) : (<button className="btn btn-info log" onClick={() => login()}>Log In</button>))
-              }
-            </li>
-          </ul>
-        </nav>
-    );
+            </NavItem>
+            {
+              (isLoggedIn() ? <NavItem eventKey={3} href="/dashboard">Dashboard</NavItem> : "")
+            }
+          </Nav>
+          <Nav pullRight>
+            {
+              (isLoggedIn()) ? (<NavItem className="btn btn-danger log" onClick={() => logout()} eventKey={4} >Log Out</NavItem>) : (<NavItem className="btn btn-info log" onClick={() => login()} eventKey={4} > Log In</NavItem>)
+            }
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    )
   }
 };
 
-export default NavbarInstance
+export default NavbarInstance;
