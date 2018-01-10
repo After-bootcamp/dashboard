@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {requireAuth} from './utils/AuthService';
-import { BrowserRouter, Router, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 // child components
 import Intro from './components/Intro';

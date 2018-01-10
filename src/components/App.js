@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "../CSS/App.css";
 
 // child Components
-import NavBar from "./NavBar";
+import NavbarInstance from "./NavbarInstance";
 import Footer from "./Footer";
 import Main from "./Main";
 
@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <NavbarInstance />
         <Main todaysData={ this.state.todaysData }/>
         <Footer />
       </div>

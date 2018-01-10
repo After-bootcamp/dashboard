@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import Stats from "./Stats";
-import AboutMe from "./AboutMe"
-import { Switch, Route } from 'react-router-dom';
+// import AboutMe from "./AboutMe"
+// import { Switch, Route } from 'react-router-dom';
 
 class Main extends Component {
 
