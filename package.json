@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "auth0-js": "^9.0.2",
+    "dotenv": "^4.0.0",
     "history": "^4.7.2",
     "jwt-decode": "^2.2.0",
     "react": "^15.6.1",
@@ -22,5 +23,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "providedServices": {
+    "code-actions": {
+      "versions": {
+        "0.1.0": "provideCodeActions"
+      }
+    }
   }
 }

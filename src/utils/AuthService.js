@@ -3,8 +3,8 @@ import decode from 'jwt-decode';
 import auth0 from 'auth0-js';
 const  ID_TOKEN_KEY = 'id_token';
 const ACCESS_TOKEN_KEY = 'access_token';
-
-const CLIENT_ID = 'lIynR8IxP16BXs9ve75SLrbhTM9i3gBa';
+require('dotenv').config();
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 const CLIENT_DOMAIN = 'nerdygerdy.auth0.com/';
 const REDIRECT = 'http://localhost:3000/callback';
 const SCOPE = 'read:checkin';

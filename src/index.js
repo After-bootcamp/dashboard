@@ -11,6 +11,7 @@ import AboutMe from './components/AboutMe';
 
 import registerServiceWorker from './registerServiceWorker';
 import './CSS/index.css';
+require('dotenv').config();
 
 const Root = () => {
   return (
