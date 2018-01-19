@@ -4,11 +4,12 @@ import auth0 from 'auth0-js';
 const  ID_TOKEN_KEY = 'id_token';
 const ACCESS_TOKEN_KEY = 'access_token';
 require('dotenv').config();
-const CLIENT_ID = 'lIynR8IxP16BXs9ve75SLrbhTM9i3gBa';
+const CLIENT_ID = "lIynR8IxP16BXs9ve75SLrbhTM9i3gBa";
 const CLIENT_DOMAIN = 'nerdygerdy.auth0.com/';
 const REDIRECT = 'http://localhost:3000/callback';
 const SCOPE = 'read:checkin';
 const AUDIENCE = 'www.afterbootcamp.com';
+console.log(CLIENT_ID);
 
 var auth = new auth0.WebAuth({
   clientID: CLIENT_ID,

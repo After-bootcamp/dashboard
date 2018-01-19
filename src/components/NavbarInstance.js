@@ -16,12 +16,12 @@ class NavbarInstance extends Component {
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav >
-            <NavItem eventKey={1} href="/">
-            Intro
+          <Nav>
+            <NavItem eventKey={1} to="/">
+              Intro
             </NavItem>
-            <NavItem eventKey={2} href="/about_us">
-            About Us
+            <NavItem eventKey={2} to="/about_us">
+              About Us
             </NavItem>
             {
               (isLoggedIn() ? <NavItem eventKey={3} href="/dashboard">Dashboard</NavItem> : "")
