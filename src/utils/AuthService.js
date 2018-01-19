@@ -4,12 +4,12 @@ import auth0 from 'auth0-js';
 const  ID_TOKEN_KEY = 'id_token';
 const ACCESS_TOKEN_KEY = 'access_token';
 require('dotenv').config();
-const CLIENT_ID = "lIynR8IxP16BXs9ve75SLrbhTM9i3gBa";
-const CLIENT_DOMAIN = 'nerdygerdy.auth0.com/';
-const REDIRECT = 'http://localhost:3000/callback';
-const SCOPE = 'read:checkin';
-const AUDIENCE = 'www.afterbootcamp.com';
-console.log(CLIENT_ID);
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+const CLIENT_DOMAIN = process.env.REACT_APP_CLIENT_DOMAIN;
+const REDIRECT = process.env.REACT_APP_REDIRECT;
+const SCOPE = process.env.REACT_APP_SCOPE;
+const AUDIENCE = process.env.REACT_APP_AUDIENCE;
+console.log("I am logged in on start: " + isLoggedIn());
 
 var auth = new auth0.WebAuth({
   clientID: CLIENT_ID,
@@ -32,6 +32,7 @@ export function logout() {
 }
 
 export function requireAuth(nextState, replace) {
+  console.log(!isLoggedIn());
   if (!isLoggedIn()) {
     replace({pathname: '/'});
   }
@@ -88,15 +89,6 @@ function getTokenExpirationDate(encodedToken) {
   } catch(err) {console.log(err)}
 }
 
-// function getTokenExpirationDate(encodedToken) {
-//   const token = decode(encodedToken);
-//   if (!token.exp) { return null; }
-//
-//   const date = new Date(0);
-//   date.setUTCSeconds(token.exp);
-//
-//   return date;
-// }
 
 function isTokenExpired(token) {
   const expirationDate = getTokenExpirationDate(token);

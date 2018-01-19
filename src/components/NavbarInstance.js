@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
-import { Link, NavLink } from 'react-router-dom';
+// import { Link, NavLink } from 'react-router-dom';
+import {NavItem, Navbar, Nav} from 'react-bootstrap';
 import {login, logout, isLoggedIn} from '../utils/AuthService';
-import {NavItem, Navbar, Nav, Button} from 'react-bootstrap';
 import '../CSS/App.css';
+
 
 class NavbarInstance extends Component {
 
   render() {
     return (
-      <Navbar  collapseOnSelect>
+      <Navbar >
         <Navbar.Header >
           <Navbar.Brand>
             <a href="/" >AfterBootcamp</a>
@@ -16,11 +17,11 @@ class NavbarInstance extends Component {
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav>
-            <NavItem eventKey={1} to="/">
+          <Nav >
+            <NavItem eventKey={1} href="/">
               Intro
             </NavItem>
-            <NavItem eventKey={2} to="/about_us">
+            <NavItem eventKey={2} href="/about_us">
               About Us
             </NavItem>
             {
