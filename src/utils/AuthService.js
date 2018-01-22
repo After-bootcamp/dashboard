@@ -4,12 +4,14 @@ import auth0 from 'auth0-js';
 const  ID_TOKEN_KEY = 'id_token';
 const ACCESS_TOKEN_KEY = 'access_token';
 require('dotenv').config();
+
+
 const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 const CLIENT_DOMAIN = process.env.REACT_APP_CLIENT_DOMAIN;
 const REDIRECT = process.env.REACT_APP_REDIRECT;
 const SCOPE = process.env.REACT_APP_SCOPE;
 const AUDIENCE = process.env.REACT_APP_AUDIENCE;
-console.log("I am logged in on start: " + isLoggedIn());
+
 
 var auth = new auth0.WebAuth({
   clientID: CLIENT_ID,

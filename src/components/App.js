@@ -6,6 +6,8 @@ import "../CSS/App.css";
 import NavbarInstance from "./NavbarInstance";
 import Footer from "./Footer";
 import Main from "./Main";
+import {isLoggedIn} from "../utils/AuthService";
+import LoginNotice from "./LoginNotice"
 
 
 class App extends Component {
@@ -21,7 +23,9 @@ class App extends Component {
     return (
       <div>
         <NavbarInstance />
-        <Main todaysData={ this.state.todaysData }/>
+        {
+          (isLoggedIn() ? <Main todaysData={ this.state.todaysData }/> : <LoginNotice />)
+        }
         <Footer />
       </div>
     );

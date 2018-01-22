@@ -7,6 +7,16 @@ import '../CSS/App.css';
 
 class NavbarInstance extends Component {
 
+  constructor() {
+    super();
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    window.location = "/about_us";
+    logout();
+  }
   render() {
     return (
       <Navbar >
@@ -30,7 +40,7 @@ class NavbarInstance extends Component {
           </Nav>
           <Nav pullRight>
             {
-              (isLoggedIn()) ? (<NavItem className="btn btn-danger log" onClick={() => logout()} eventKey={4} >Log Out</NavItem>) : (<NavItem className="btn btn-info log" onClick={() => login()} eventKey={4} > Log In</NavItem>)
+              (isLoggedIn()) ? (<NavItem className="btn btn-danger log" onClick={() =>  this.handleClick()} eventKey={4} >Log Out</NavItem>) : (<NavItem className="btn btn-info log" onClick={() => login()} eventKey={4} >Log In</NavItem>)
             }
           </Nav>
         </Navbar.Collapse>
