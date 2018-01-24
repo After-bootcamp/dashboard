@@ -9,11 +9,11 @@ class Stats extends Component {
     super();
     this.state = {
       todaysData:[
-         { name: 'Code Challenges', A: 3},
-         { name: 'Job Search', A: 2},
-         { name: 'Networking', A: 3},
-         { name: 'Algorithms', A: 4},
-         { name: 'Coding Playground', A: 5},
+         { x: 1, y: 3, label: 'Code Challenges'},
+         { x: 2, y: 2, label: 'Job Search'},
+         { x: 3, y: 3, label: 'Networking'},
+         { x: 4, y: 4, label: 'Algorithms'},
+         { x: 5, y: 5, label: 'Coding Playground'},
       ],
       currentData: {
         showModal: false,
@@ -28,8 +28,20 @@ class Stats extends Component {
     }
   }
   showAnswers(answers) {
-    this.setState({todaysData : answers}, console.log(this.state))
-    console.log('the value of answers: ', answers);
+    this.setState({todaysData : answers}, this.forceUpdate())
+    console.log('the value of answers:  ', answers);
+    // this.forceUpdate();
+  }
+  componentDidMount() {
+    console.log(this.state.todaysData);
+  }
+  componentDidUpdate(prevProps, prevState) {
+    console.log("stats did update", this.state.todaysData);
+    console.log(prevState.todaysData);
+
+    // if (this.state.todaysData !== prevState.todaysData) {
+    //     this.setState({todaysData: prevState.todaysData});
+    // }
   }
 
   render() {
@@ -43,7 +55,7 @@ class Stats extends Component {
         />
         <Charts
           todaysData={this.state.todaysData}
-          currentData={this.state.currentData}
+          showAnswer={this.showAnswers.bind(this)}
         />
       </div>
     )

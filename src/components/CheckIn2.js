@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Modal, FormGroup, Radio, FormControl, ControlLabel } from "react-bootstrap";
+// import { Modal, FormGroup, Radio, FormControl, ControlLabel } from "react-bootstrap";
 import Select from "./Select"
 
 class CheckIn2 extends Component {
@@ -11,15 +11,19 @@ class CheckIn2 extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    console.log("state at Checkin2: ", this.state.todaysData);
+  }
+
   handleSubmit(event) {
-    console.log(this.state.todaysData[0]);
+    // console.log(this.state.todaysData[0]);
     event.preventDefault();
     this.props.showAnswers(this.state);
   }
 
   showAnswers(answers, index) {
     const newAnswer = parseInt(answers);
-    this.state.todaysData[index].A = newAnswer;
+    this.state.todaysData[index].y = newAnswer;
     console.log('the value of newAnswer: ', newAnswer);
   }
 
@@ -28,7 +32,7 @@ class CheckIn2 extends Component {
         <form onSubmit={this.handleSubmit}>
           {[...this.state.todaysData.keys()].map((n) => (
             <label key={n}>
-              {this.state.todaysData[n].name}:
+              {this.state.todaysData[n].label}:
               <Select
                 value={this.state.todaysData[n]}
                 showAnswers={this.showAnswers.bind(this)}

@@ -5,7 +5,7 @@ class Select extends Component {
     super(props);
     this.state = {
       value: props.value,
-      newNumber: props.value.A,
+      newNumber: props.value.y,
       currentIndex: props.currentIndex
     }
     this.handleChange= this.handleChange.bind(this);

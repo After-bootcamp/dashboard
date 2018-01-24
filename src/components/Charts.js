@@ -1,13 +1,6 @@
 import React, {Component} from "react";
-import {Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis, RadialBarChart, RadialBar, Tooltip} from "recharts";
-
-const data = [
- { subject: 'Code Challenges', A: 140 },
- { subject: 'Job Search', A: 98 },
- { subject: 'Networking', A: 86 },
- { subject: 'Algorithms', A: 99},
- { subject: 'Coding Playground', A: 85},
-];
+import {VictoryPie, VictoryContainer} from "victory";
+// import {Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis, RadialBarChart, RadialBar, Tooltip, PieChart, Pie, ResponsiveContainer} from "recharts";
 
 const style = {
   top: 0,
@@ -15,33 +8,41 @@ const style = {
   lineHeight: '24px'
 };
 
-
 class Charts extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todaysData: props.todaysData,
-      currentData: props.currentData
+      todaysData: [
+         { x: 1, y: 1, label: 'Code Challenges'},
+         { x: 2, y: 1, label: 'Job Search'},
+         { x: 3, y: 1, label: 'Networking'},
+         { x: 4, y: 1, label: 'Algorithms'},
+         { x: 5, y: 1, label: 'Coding Playground'},
+      ],
     };
   }
+
+  componentDidMount() {
+    this.setState({todaysData: this.props.todaysData})
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("Previous props: ", prevProps, "& prevState: ", prevState);
+    console.log(this.state.todaysData === prevState);
+    console.log(this.state.todaysData);
+    console.log(prevState.todaysData);
+    // if (this.state.todaysData !== prevState.todaysData) {
+    //   this.setState({todaysData: prevState.todaysData})
+    // }
+  }
+
   render() {
     return (
       <div>
-        <RadarChart cx={300} cy={250} outerRadius={150} width={600} height={500} data={this.state.todaysData}>
-          <PolarGrid />
-          <PolarAngleAxis dataKey="subject" />
-          <PolarRadiusAxis/>
-          <Tooltip />
-          <Legend />
-          <Radar name="Today's info" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6}/>
-        </RadarChart>
-        <h2>Charts(some kind of progress thingy)</h2>
-        <h3>Code Challenges: {this.state.currentData.selectedOption1}</h3>
-        <h3>Job Search: {this.state.currentData.selectedOption2}</h3>
-        <h3>Networking: {this.state.currentData.selectedOption3}</h3>
-        <h3>Algorithms: {this.state.currentData.selectedOption4}</h3>
-        <h3>Coding Playground: {this.state.currentData.selectedOption5}</h3>
-        <h3>Available Time: {this.state.currentData.selectedHours}</h3>
+          <VictoryPie
+            colorScale={["tomato", "orange", "gold", "cyan", "navy" ]}
+            data={this.state.todaysData}
+          />
       </div>
     )
   }
