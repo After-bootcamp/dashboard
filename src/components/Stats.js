@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import CheckIn from "./CheckIn";
+// import CheckIn from "./CheckIn";
 import CheckIn2 from "./CheckIn2";
 import Charts from "./Charts";
 
@@ -9,26 +9,23 @@ class Stats extends Component {
     super();
     this.state = {
       todaysData:[
-         { x: 1, y: 3, label: 'Code Challenges'},
-         { x: 2, y: 2, label: 'Job Search'},
-         { x: 3, y: 3, label: 'Networking'},
-         { x: 4, y: 4, label: 'Algorithms'},
-         { x: 5, y: 5, label: 'Coding Playground'},
+         { index: 1, value: 3, label: 'Code Challenges'},
+         { index: 2, value: 2, label: 'Job Search'},
+         { index: 3, value: 3, label: 'Networking'},
+         { index: 4, value: 4, label: 'Algorithms'},
+         { index: 5, value: 5, label: 'Coding Playground'},
       ],
-      currentData: {
-        showModal: false,
-        selectedOption1: '0',
-        selectedOption2: '0',
-        selectedOption3: '0',
-        selectedOption4: '0',
-        selectedOption5: '0',
-        selectedOption6: '0',
-        selectedHours: '0'
-      }
+      weeksData:[
+        { index: 1, value: 3, label: 'Code Challenges'},
+        { index: 2, value: 2, label: 'Job Search'},
+        { index: 3, value: 3, label: 'Networking'},
+        { index: 4, value: 4, label: 'Algorithms'},
+        { index: 5, value: 5, label: 'Coding Playground'},
+      ]
     }
   }
   showAnswers(answers) {
-    this.setState({todaysData : answers}, this.forceUpdate())
+    this.setState({answers}, this.forceUpdate())
     console.log('the value of answers:  ', answers);
     // this.forceUpdate();
   }
@@ -56,6 +53,7 @@ class Stats extends Component {
         <Charts
           todaysData={this.state.todaysData}
           showAnswer={this.showAnswers.bind(this)}
+          weeksData={this.state.weeksData}
         />
       </div>
     )

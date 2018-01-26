@@ -1,14 +1,19 @@
 import React, {Component} from "react";
-// import { Modal, FormGroup, Radio, FormControl, ControlLabel } from "react-bootstrap";
-import Select from "./Select"
+import { Modal, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+
 
 class CheckIn2 extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      todaysData: props.todaysData
+      todaysData: props.todaysData,
+      show: false
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleShow = this.handleShow.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   componentDidMount() {
@@ -16,32 +21,60 @@ class CheckIn2 extends Component {
   }
 
   handleSubmit(event) {
-    // console.log(this.state.todaysData[0]);
+    console.log("You have submitted this: ", this.state.todaysData);
     event.preventDefault();
+    this.handleClose();
     this.props.showAnswers(this.state);
   }
 
-  showAnswers(answers, index) {
-    const newAnswer = parseInt(answers);
-    this.state.todaysData[index].y = newAnswer;
-    console.log('the value of newAnswer: ', newAnswer);
+  handleInputChange(event) {
+    const target = event.target;
+    let value = target.value;
+    const name = target.name;
+    let tempArray = this.state.todaysData.slice();
+    console.log(tempArray);
+    tempArray[name].value = parseInt(value);
+    this.setState({
+      todaysData:tempArray
+    });
+  }
+
+  handleShow() {
+    this.setState({show: true});
+  }
+
+  handleClose() {
+    this.setState({show: false})
   }
 
   render() {
     return(
-        <form onSubmit={this.handleSubmit}>
-          {[...this.state.todaysData.keys()].map((n) => (
-            <label key={n}>
-              {this.state.todaysData[n].label}:
-              <Select
-                value={this.state.todaysData[n]}
-                showAnswers={this.showAnswers.bind(this)}
-                currentIndex={n}
-              />
-            </label>
-          ))}
-          <input type="submit" value="Submit" />
-        </form>
+      <div>
+        <h3>Check In Time!</h3>
+        <Button bsStyle="info" bsSize="large" onClick={this.handleShow}>
+          Check in here
+        </Button>
+        <Modal show={this.state.show} onHide={this.handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Check in here</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+          <form onSubmit={this.handleSubmit}>
+            {[...this.state.todaysData.keys()].map((n) => (
+              <FormGroup key={n} controlId="formControlSelect">
+                <ControlLabel>{this.state.todaysData[n].label}</ControlLabel>
+                <FormControl name={n} componentClass="select" value={this.state.todaysData[n].value} onChange={this.handleInputChange}>
+                  {
+                    [...Array(25).keys()].map((m)=>(<option key={m} value={`${m}`}>{m}</option>))
+                  }
+                </FormControl>
+              </FormGroup>
+            ))}
+            <Button type="submit" >Submit</Button>
+          </form>
+          </Modal.Body>
+        </Modal>
+      </div>
     )
   }
 }
